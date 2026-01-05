@@ -10,6 +10,10 @@
   border-radius: $border-radius;
   box-shadow: $shadow-md;
   z-index: 10;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    left: 2rem
+  }
 }
 
 .header {

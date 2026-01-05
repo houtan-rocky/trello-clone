@@ -148,7 +148,7 @@ export const ListActionsMenu = ({
         {screen === 'deleteList' && (
           <div className={styles.confirmation}>
             <p className={styles.confirmationText}>
-              All actions will be removed from the activity feed and you won't be able to re-open
+              All actions will be removed from the activity feed and you won&apos;t be able to re-open
               the list. There is no undo.
             </p>
             <button
