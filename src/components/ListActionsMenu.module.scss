@@ -3,8 +3,8 @@
 
 .menu {
   position: absolute;
-  top: 2rem;
-  left: calc(100% - 2rem);
+  top: 1.5rem;
+  right: calc(100% - 2rem);
   width: 17rem;
   background-color: $background-gray;
   border-radius: $border-radius;
@@ -12,7 +12,7 @@
   z-index: 10;
 
   @media screen and (max-width: $breakpoint-sm) {
-    left: 2rem
+    right: -3rem;
   }
 }
 
