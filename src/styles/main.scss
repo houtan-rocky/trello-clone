@@ -1,0 +1,114 @@
+/**
+ * Main SCSS file
+ * Imports all partials and defines global styles
+ */
+
+// Import variables and mixins first
+@import 'variables';
+@import 'mixins';
+
+// Global styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: $text-primary;
+  background-color: $background-gray;
+  overflow-x: hidden;
+}
+
+// Scrollbar styling for body
+body {
+  @include custom-scrollbar;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  color: $text-primary;
+}
+
+h1 {
+  font-size: $font-size-2xl;
+}
+
+h2 {
+  font-size: $font-size-xl;
+}
+
+h3 {
+  font-size: $font-size-lg;
+}
+
+p {
+  margin: 0;
+  line-height: $line-height-relaxed;
+}
+
+// Links
+a {
+  color: $primary-blue;
+  text-decoration: none;
+  transition: color $transition-base;
+  
+  &:hover {
+    color: $primary-blue-hover;
+  }
+}
+
+// Buttons
+button {
+  @include button-reset;
+  font-weight: $font-weight-medium;
+  transition: all $transition-base;
+}
+
+// Inputs
+input,
+textarea {
+  @include input-reset;
+  width: 100%;
+  
+  &::placeholder {
+    color: $text-muted;
+  }
+}
+
+// Utility classes
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.text-truncate {
+  @include truncate;
+}
+
+.text-muted {
+  color: $text-muted;
+}
+
+.text-secondary {
+  color: $text-secondary;
+}
+
