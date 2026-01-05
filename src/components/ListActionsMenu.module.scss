@@ -1,0 +1,124 @@
+@import '../styles/_variables';
+@import '../styles/_mixins';
+
+.menu {
+  position: absolute;
+  top: 2rem;
+  left: calc(100% - 2rem);
+  width: 17rem;
+  background-color: rgb(244, 245, 247);
+  border-radius: 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0.125rem 0.125rem 0.5rem;
+  z-index: 10;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem;
+  border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+}
+
+.headerButton {
+  @include button-reset;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-secondary;
+  border-radius: $border-radius;
+  transition: background-color $transition-base, color $transition-base;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &:hover:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: $text-primary;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.headerTitle {
+  font-size: 1em;
+  font-weight: $font-weight-normal;
+  color: rgb(107, 119, 140);
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  padding: 0 $spacing-sm;
+}
+
+.content {
+  padding: 0.5rem 0;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  list-style: none;
+}
+
+.menuLink {
+  @include button-reset;
+  display: block;
+  width: 100%;
+  padding: 0.3rem 0.75rem;
+  text-align: left;
+  color: rgb(23, 43, 77);
+  font-size: $font-size-sm;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+
+  &:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 126, 175);
+  }
+}
+
+.confirmation {
+  padding: 0px 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.confirmationText {
+  margin: 0 0 0.5rem 0;
+  color: $text-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-tight;
+}
+
+.deleteButton {
+  @include button-reset;
+  padding: 0.5rem 1rem;
+  background-color: rgb(207, 81, 61);
+  color: $text-white;
+  border-radius: $border-radius;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  transition: background-color $transition-base;
+  align-self: flex-start;
+
+  &:hover {
+    background-color: rgb(182, 61, 41);
+  }
+}
+

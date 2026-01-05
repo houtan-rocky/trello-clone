@@ -1,0 +1,72 @@
+@import '../styles/_variables';
+@import '../styles/_mixins';
+
+.card {
+  cursor: pointer;
+  @include drag-handle;
+  margin-bottom: $spacing-sm;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 0px;
+  transition: background-color 0.2s ease-in;
+  box-sizing: border-box;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  &:focus {
+    @include focus-ring;
+    outline: none;
+  }
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cardTitle {
+  font-size: 0.875rem;
+  word-break: break-word;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.commentButton {
+  @include button-reset;
+  font-size: $font-size-xs;
+  color: rgb(23, 43, 77);
+  padding: 0.3rem 0.6rem;
+  border-radius: $border-radius;
+  background-color: rgb(223, 225, 230);
+  transition: background-color $transition-base, color $transition-base;
+  flex-shrink: 0;
+  line-height: 1.4;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  // Prevent height changes during drag - maintain consistent height
+  min-height: 1.5rem;
+  height: auto;
+
+  &:hover {
+    background-color: rgb(193, 199, 208);
+    color: rgb(23, 43, 77);
+  }
+}
+

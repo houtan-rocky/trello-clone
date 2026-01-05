@@ -4,13 +4,15 @@
  */
 
 // Colors - Trello-like color scheme
-$primary-blue: #0079bf;
+$primary-blue: #2E7EAF;
 $primary-blue-hover: #026aa7;
 $primary-blue-light: #e4f0f6;
 
 $background-gray: #f4f5f7;
+$background-list: #ebecf0;
 $background-white: #ffffff;
 $background-dark: #172b4d;
+$board-background: #2E7EAF;
 
 $text-primary: #172b4d;
 $text-secondary: #5e6c84;
@@ -26,8 +28,7 @@ $shadow-lg: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 $shadow-xl: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
 // Typography
-$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$font-family: 'Roboto', sans-serif;
 $font-size-xs: 0.75rem; // 12px
 $font-size-sm: 0.875rem; // 14px
 $font-size-base: 1rem; // 16px

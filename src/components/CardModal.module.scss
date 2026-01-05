@@ -1,0 +1,155 @@
+@import '../styles/_variables';
+@import '../styles/_mixins';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: $z-index-modal;
+  padding: $spacing-md;
+  overflow-y: auto;
+}
+
+.modal {
+  width: 100%;
+  max-width: 420px;
+  max-height: 80vh;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(9, 30, 66, 0.35) 0px 10px 30px;
+  position: relative;
+  margin: auto;
+}
+
+.modalContent {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  @include custom-scrollbar;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  color: $text-primary;
+  margin: 0;
+}
+
+.closeButton {
+  @include button-reset;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-xl;
+  color: $text-secondary;
+  border-radius: $border-radius;
+  transition: background-color $transition-base, color $transition-base;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $background-gray;
+    color: $text-primary;
+  }
+}
+
+.commentsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $spacing-md 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.commentItem {
+  list-style: none;
+  padding: 0.5rem;
+  background-color: rgb(244, 245, 247);
+  border-radius: 0.2rem;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  &:not(:last-child) {
+    margin-bottom: 0.4rem;
+  }
+}
+
+.commentMeta {
+  font-size: 12px;
+  color: $text-secondary;
+  margin-bottom: 0.25rem;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  margin-top: auto;
+}
+
+.commentTextarea {
+  @include input-reset;
+  width: 100%;
+  resize: vertical;
+  min-height: 60px;
+  padding: 0.6rem;
+  border-radius: 0.2rem;
+  border: 1px solid rgb(223, 225, 230);
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Roboto', sans-serif;
+  color: $text-primary;
+
+  &:focus {
+    outline: 4px solid rgb(255, 255, 255) !important;
+    outline-offset: 2px;
+    border-color: $primary-blue;
+  }
+
+  &::placeholder {
+    color: $text-secondary;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+  }
+}
+
+.addButton {
+  @include button-reset;
+  align-self: flex-end;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.2rem;
+  background-color: rgb(90, 172, 68);
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+
+  &:hover:not(:disabled) {
+    background-color: rgb(80, 152, 58);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

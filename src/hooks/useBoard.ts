@@ -42,6 +42,7 @@ export const useBoardActions = () => {
     addList: useBoardStore((state) => state.addList),
     updateList: useBoardStore((state) => state.updateList),
     deleteList: useBoardStore((state) => state.deleteList),
+    deleteAllCards: useBoardStore((state) => state.deleteAllCards),
     reorderLists: useBoardStore((state) => state.reorderLists),
     addCard: useBoardStore((state) => state.addCard),
     updateCard: useBoardStore((state) => state.updateCard),

@@ -1,0 +1,78 @@
+@import '../styles/_variables';
+@import '../styles/_mixins';
+
+.header {
+  @include flex-between;
+  padding: 0.5rem 0.7rem 0rem 0.5rem;
+}
+
+.title {
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: $text-primary;
+  margin: 0;
+  cursor: pointer;
+  border-radius: $border-radius;
+  flex: 1;
+  transition: background-color $transition-base;
+  @include drag-handle;
+  display: block;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  &:focus {
+    @include focus-ring;
+    outline: none;
+  }
+}
+
+.titleInput {
+  background: $background-white;
+  border: 2px solid $primary-blue;
+  border-radius: $border-radius;
+  padding: 0.3rem 0.5rem;
+  color: $text-primary;
+  font-size: 1rem;
+  font-weight: 600;
+  flex: 1;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-blue-hover;
+  }
+}
+
+.menu {
+  position: relative;
+}
+
+.menuButton {
+  @include button-reset;
+  padding: $spacing-xs;
+  border-radius: $border-radius;
+  color: $text-secondary;
+  transition: background-color $transition-base;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: $text-primary;
+  }
+}
+
+.menuIcon {
+  width: 16px;
+  height: 16px;
+}
+
+

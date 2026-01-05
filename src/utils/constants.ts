@@ -3,7 +3,7 @@
  * Demo board data and configuration
  */
 
-import { Board, List, Card } from '@/types';
+import { Board } from '@/types';
 import { generateId } from './idGenerator';
 
 /**
@@ -16,13 +16,13 @@ export const DEMO_BOARD: Board = {
   lists: [
     {
       id: generateId(),
-      title: 'To Do',
+      title: 'Todo',
       boardId: '',
       order: 0,
       cards: [
         {
           id: generateId(),
-          title: 'Setup project structure',
+          title: 'Create interview Kanban',
           listId: '',
           order: 0,
           comments: [],
@@ -30,7 +30,7 @@ export const DEMO_BOARD: Board = {
         },
         {
           id: generateId(),
-          title: 'Implement drag and drop',
+          title: 'Review Drag & Drop',
           listId: '',
           order: 1,
           comments: [],
@@ -47,7 +47,7 @@ export const DEMO_BOARD: Board = {
       cards: [
         {
           id: generateId(),
-          title: 'Design UI components',
+          title: 'Set up Next.js project',
           listId: '',
           order: 0,
           comments: [],
@@ -61,25 +61,16 @@ export const DEMO_BOARD: Board = {
       title: 'Done',
       boardId: '',
       order: 2,
-      cards: [
-        {
-          id: generateId(),
-          title: 'Project initialization',
-          listId: '',
-          order: 0,
-          comments: [],
-          createdAt: new Date(),
-        },
-      ],
+      cards: [],
       createdAt: new Date(),
     },
   ],
 };
 
 // Fix boardId references in lists and listId references in cards
-DEMO_BOARD.lists.forEach((list, listIndex) => {
+DEMO_BOARD.lists.forEach((list) => {
   list.boardId = DEMO_BOARD.id;
-  list.cards.forEach((card, cardIndex) => {
+  list.cards.forEach((card) => {
     card.listId = list.id;
   });
 });

@@ -17,6 +17,7 @@ interface BoardStore extends BoardState {
   addList: (list: Omit<List, 'id' | 'createdAt' | 'updatedAt' | 'cards'>) => void;
   updateList: (id: string, title: string) => void;
   deleteList: (id: string) => void;
+  deleteAllCards: (listId: string) => void;
   reorderLists: (lists: List[]) => void;
   addCard: (listId: string, card: Omit<Card, 'id' | 'createdAt' | 'updatedAt' | 'comments'>) => void;
   updateCard: (id: string, title: string) => void;
@@ -120,6 +121,29 @@ export const useBoardStore = create<BoardStore>()(
         const updatedBoard: Board = {
           ...board,
           lists: board.lists.filter((list: List) => list.id !== id),
+          updatedAt: new Date(),
+        };
+
+        set({ board: updatedBoard });
+        saveBoardToStorage(updatedBoard);
+      },
+
+      // Delete all cards from a list
+      deleteAllCards: (listId: string) => {
+        const { board } = get();
+        if (!board) return;
+
+        const updatedBoard: Board = {
+          ...board,
+          lists: board.lists.map((list: List) =>
+            list.id === listId
+              ? {
+                  ...list,
+                  cards: [],
+                  updatedAt: new Date(),
+                }
+              : list
+          ),
           updatedAt: new Date(),
         };
 

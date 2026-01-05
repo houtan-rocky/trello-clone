@@ -1,0 +1,50 @@
+@import '../styles/_variables';
+@import '../styles/_mixins';
+
+.list {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  max-height: 83vh;
+  width: 16rem;
+  margin: 0 0.5rem;
+  background-color: rgb(223, 225, 230);
+  border-radius: 0.2rem;
+  box-shadow: none;
+  transition: box-shadow $transition-base;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &.dragging {
+    opacity: 0.5;
+  }
+}
+
+.cardsContainer {
+  min-height: 2rem;
+  position: relative;
+  padding: 0.5rem;
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  @include custom-scrollbar;
+  
+  // Hide placeholder visually but maintain its space
+  :global([data-rbd-droppable-placeholder-context-id]) {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    // Prevent extra whitespace
+    margin: 0 !important;
+  }
+  
+  // Prevent extra spacing at the end
+  &::after {
+    content: none;
+  }
+}
+

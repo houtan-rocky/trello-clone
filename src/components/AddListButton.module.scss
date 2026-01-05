@@ -1,0 +1,114 @@
+@import '../styles/_variables';
+@import '../styles/_mixins';
+
+.button {
+  @include button-reset;
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s ease-in;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.18);
+    color: rgb(255, 255, 255);
+  }
+}
+
+.container {
+  flex-shrink: 0;
+  width: 16rem;
+  margin: 0 0.5rem;
+}
+
+.editingContainer {
+  flex-shrink: 0;
+  width: 16rem;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  background-color: rgb(227, 227, 227);
+  border-radius: 0.2rem;
+}
+
+.input {
+  @include input-reset;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid rgb(223, 225, 230);
+  border-radius: 0.2rem;
+  font-size: $font-size-base;
+  background: $background-white;
+  color: $text-primary;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-blue;
+  }
+
+  &::placeholder {
+    color: $text-secondary;
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.createButton {
+  @include button-reset;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background-color: rgb(90, 172, 68);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+
+  &:hover:not(:disabled) {
+    background-color: rgb(80, 152, 58);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.cancelButton {
+  @include button-reset;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(107, 119, 140);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: rgb(64, 66, 75);
+  }
+}
+
