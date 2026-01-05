@@ -35,7 +35,6 @@
 
 .titleInput {
   background: $background-white;
-  border: 2px solid $primary-blue;
   border-radius: $border-radius;
   padding: $spacing-xs $spacing-sm;
   color: $text-primary;
@@ -45,8 +44,7 @@
   width: 100%;
 
   &:focus {
-    outline: none;
-    border-color: $primary-blue-hover;
+    outline: 2px solid $primary-blue-hover;
   }
 }
 

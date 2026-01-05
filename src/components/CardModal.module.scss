@@ -113,7 +113,7 @@
   min-height: 60px;
   padding: $spacing-sm;
   background: $background-white;
-  border: 2px solid $primary-blue;
+  border: 1px solid $border-color;
   border-radius: $border-radius;
   font-size: $font-size-sm;
   margin-bottom: $spacing-xs;
@@ -122,8 +122,8 @@
   color: $text-primary;
 
   &:focus {
-    @include focus-ring;
-    border-color: $primary-blue-hover;
+    outline: 2px solid $primary-blue-hover;
+    outline-offset: -2px;
   }
 
   &::placeholder {
