@@ -4,50 +4,50 @@
 .button {
   @include button-reset;
   width: 100%;
-  padding: 0.6rem;
-  font-size: 1rem;
-  color: rgb(255, 255, 255);
+  padding: $spacing-sm;
+  font-size: $font-size-base;
+  color: $text-white;
   text-align: left;
-  border-radius: 0.2rem;
-  background-color: rgba(0, 0, 0, 0.12);
-  transition: background-color 0.2s ease-in;
+  border-radius: $border-radius;
+  background-color: $overlay-hover-strong;
+  transition: background-color $transition-base;
   cursor: pointer;
   border: none;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.18);
-    color: rgb(255, 255, 255);
+    background-color: $overlay-hover-strong;
+    color: $text-white;
   }
 }
 
 .container {
   flex-shrink: 0;
-  width: 16rem;
-  margin: 0 0.5rem;
+  width: $list-width;
+  margin: 0 $spacing-sm;
 }
 
 .editingContainer {
   flex-shrink: 0;
-  width: 16rem;
-  margin: 0 0.5rem;
-  padding: 0.5rem;
+  width: $list-width;
+  margin: 0 $spacing-sm;
+  padding: $spacing-sm;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.6rem;
-  background-color: rgb(227, 227, 227);
-  border-radius: 0.2rem;
+  gap: $spacing-sm;
+  padding: $spacing-sm;
+  background-color: $background-subtle;
+  border-radius: $border-radius;
 }
 
 .input {
   @include input-reset;
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid rgb(223, 225, 230);
-  border-radius: 0.2rem;
+  border: 2px solid $primary-blue;
+  border-radius: $border-radius;
   font-size: $font-size-base;
   background: $background-white;
   color: $text-primary;
@@ -65,22 +65,22 @@
 .buttonGroup {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: $spacing-sm;
 }
 
 .createButton {
   @include button-reset;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: rgb(255, 255, 255);
-  background-color: rgb(90, 172, 68);
-  border-radius: 0.2rem;
+  padding: $spacing-sm $spacing-md;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $text-white;
+  background-color: $accent-green;
+  border-radius: $border-radius;
   cursor: pointer;
-  transition: background-color 0.2s ease-in;
+  transition: background-color $transition-base;
 
   &:hover:not(:disabled) {
-    background-color: rgb(80, 152, 58);
+    background-color: $accent-green-hover;
   }
 
   &:disabled {
@@ -96,10 +96,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(107, 119, 140);
-  border-radius: 0.2rem;
+  color: $text-tertiary;
+  border-radius: $border-radius;
   cursor: pointer;
-  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  transition: background-color $transition-base, color $transition-base;
 
   svg {
     width: 16px;
@@ -107,8 +107,8 @@
   }
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.08);
-    color: rgb(64, 66, 75);
+    background-color: $overlay-hover;
+    color: $text-body;
   }
 }
 

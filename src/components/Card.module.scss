@@ -5,11 +5,11 @@
   cursor: pointer;
   @include drag-handle;
   margin-bottom: $spacing-sm;
-  padding: 0.5rem;
-  border-radius: 0.2rem;
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 0px;
-  transition: background-color 0.2s ease-in;
+  padding: $card-padding;
+  border-radius: $border-radius;
+  background-color: $background-white;
+  box-shadow: $shadow-sm;
+  transition: background-color $transition-base;
   box-sizing: border-box;
 
   &:last-child {
@@ -17,7 +17,7 @@
   }
 
   &:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: $background-white;
   }
 
   &:focus {
@@ -33,11 +33,11 @@
 }
 
 .cardTitle {
-  font-size: 0.875rem;
+  font-size: $font-size-sm;
   word-break: break-word;
-  margin-bottom: 0.5rem;
-  font-weight: 400;
-  line-height: 1.4;
+  margin-bottom: $spacing-sm;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
 }
 
 .cardFooter {
@@ -49,10 +49,10 @@
 .commentButton {
   @include button-reset;
   font-size: $font-size-xs;
-  color: rgb(23, 43, 77);
-  padding: 0.3rem 0.6rem;
+  color: $text-primary;
+  padding: $spacing-xs $spacing-sm;
   border-radius: $border-radius;
-  background-color: rgb(223, 225, 230);
+  background-color: $background-subtle;
   transition: background-color $transition-base, color $transition-base;
   flex-shrink: 0;
   line-height: 1.4;
@@ -65,8 +65,8 @@
   height: auto;
 
   &:hover {
-    background-color: rgb(193, 199, 208);
-    color: rgb(23, 43, 77);
+    background-color: $border-color-hover;
+    color: $text-primary;
   }
 }
 

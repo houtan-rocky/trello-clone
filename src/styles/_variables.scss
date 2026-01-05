@@ -13,19 +13,38 @@ $background-list: #ebecf0;
 $background-white: #ffffff;
 $background-dark: #172b4d;
 $board-background: #2E7EAF;
+// Subtle surfaces / overlays
+$background-subtle: #dfe1e6; // rgb(223, 225, 230)
+$overlay-hover-subtle: rgba(0, 0, 0, 0.05);
+$overlay-hover: rgba(0, 0, 0, 0.08);
+$overlay-hover-strong: rgba(0, 0, 0, 0.18);
+$overlay-backdrop: rgba(0, 0, 0, 0.5);
 
 $text-primary: #172b4d;
 $text-secondary: #5e6c84;
 $text-muted: #8993a4;
 $text-white: #ffffff;
+// Additional text tokens
+$text-body: #40424b; // rgb(64, 66, 75)
+$text-tertiary: #6b778c; // rgb(107, 119, 140)
 
 $border-color: #dfe1e6;
 $border-color-hover: #c1c7d0;
+// Subtle divider / header borders
+$border-subtle: rgba(9, 30, 66, 0.13);
 
 $shadow-sm: 0 1px 0 rgba(9, 30, 66, 0.25);
 $shadow-md: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 $shadow-lg: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 $shadow-xl: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+// Modal / dropdown specific shadow
+$shadow-modal: 0 10px 30px rgba(9, 30, 66, 0.35);
+
+// Accent states
+$accent-green: #5aac44; // rgb(90, 172, 68)
+$accent-green-hover: #50983a; // rgb(80, 152, 58);
+$danger-red: #cf513d; // rgb(207, 81, 61)
+$danger-red-hover: #b63d29; // rgb(182, 61, 41)
 
 // Typography
 $font-family: 'Roboto', sans-serif;

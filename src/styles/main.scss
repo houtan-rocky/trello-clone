@@ -24,7 +24,7 @@ body {
   font-family: $font-family;
   font-size: 14px;
   line-height: $line-height-normal;
-  color: rgb(64, 66, 75);
+  color: $text-body;
   background-color: $board-background;
   overflow-x: hidden;
   transition: opacity ease-in 0.2s;

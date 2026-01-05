@@ -6,9 +6,9 @@
   top: 2rem;
   left: calc(100% - 2rem);
   width: 17rem;
-  background-color: rgb(244, 245, 247);
-  border-radius: 0.2rem;
-  box-shadow: rgba(0, 0, 0, 0.3) 0.125rem 0.125rem 0.5rem;
+  background-color: $background-gray;
+  border-radius: $border-radius;
+  box-shadow: $shadow-md;
   z-index: 10;
 }
 
@@ -16,8 +16,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.4rem;
-  border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+  padding: $spacing-xs;
+  border-bottom: 1px solid $border-subtle;
 }
 
 .headerButton {
@@ -52,7 +52,7 @@
 .headerTitle {
   font-size: 1em;
   font-weight: $font-weight-normal;
-  color: rgb(107, 119, 140);
+  color: $text-tertiary;
   margin: 0;
   flex: 1;
   text-align: center;
@@ -60,7 +60,7 @@
 }
 
 .content {
-  padding: 0.5rem 0;
+  padding: $spacing-sm 0;
 }
 
 .menuList {
@@ -77,23 +77,23 @@
   @include button-reset;
   display: block;
   width: 100%;
-  padding: 0.3rem 0.75rem;
+  padding: $spacing-xs $spacing-md;
   text-align: left;
-  color: rgb(23, 43, 77);
+  color: $text-primary;
   font-size: $font-size-sm;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   text-decoration: none;
   cursor: pointer;
   transition: 0.2s ease-in;
 
   &:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgb(46, 126, 175);
+    color: $text-white;
+    background-color: $primary-blue;
   }
 }
 
 .confirmation {
-  padding: 0px 0.5rem;
+  padding: 0 $spacing-sm;
   display: flex;
   flex-direction: column;
 }
@@ -107,10 +107,11 @@
 
 .deleteButton {
   @include button-reset;
-  padding: 0.5rem 1rem;
-  background-color: rgb(207, 81, 61);
+  padding: $spacing-sm $spacing-md;
+  background-color: $danger-red;
   color: $text-white;
   border-radius: $border-radius;
+  box-shadow: 0 1px 0 rgba(110, 47, 26, 1);
   font-size: $font-size-base;
   font-weight: $font-weight-medium;
   cursor: pointer;

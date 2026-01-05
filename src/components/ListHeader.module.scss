@@ -3,14 +3,14 @@
 
 .header {
   @include flex-between;
-  padding: 0.5rem 0.7rem 0rem 0.5rem;
+  padding: $spacing-sm $spacing-md 0 $spacing-sm;
 }
 
 .title {
   width: 100%;
-  padding: 0.3rem 0.5rem;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -24,7 +24,7 @@
   display: block;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.08);
+    background-color: $overlay-hover;
   }
 
   &:focus {
@@ -37,10 +37,10 @@
   background: $background-white;
   border: 2px solid $primary-blue;
   border-radius: $border-radius;
-  padding: 0.3rem 0.5rem;
+  padding: $spacing-xs $spacing-sm;
   color: $text-primary;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
   flex: 1;
   width: 100%;
 
@@ -65,7 +65,7 @@
   justify-content: center;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: $overlay-hover-subtle;
     color: $text-primary;
   }
 }
