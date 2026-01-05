@@ -7,11 +7,8 @@ A full-featured Trello clone built with Next.js, TypeScript, and SCSS. This proj
 - **Next.js 16.1.1** - React framework with App Router
 - **TypeScript 5** - Type-safe development
 - **SCSS** - Styling with variables, mixins, and nesting
-- **Zustand 5.0.9** - Lightweight state management
-- **@dnd-kit** - Modern drag and drop library
-  - `@dnd-kit/core` - Core drag and drop functionality
-  - `@dnd-kit/sortable` - Sortable components
-  - `@dnd-kit/utilities` - Utility functions
+- **Zustand 5.0.2** - Lightweight state management
+- **@hello-pangea/dnd 18.0.1** - Drag and drop library (fork of react-beautiful-dnd)
 - **localStorage** - Client-side data persistence
 
 ## 📁 Project Structure
@@ -56,6 +53,12 @@ src/
 - Responsive design with media queries
 - Custom scrollbar styling
 
+### Drag and Drop
+- @hello-pangea/dnd for drag and drop functionality
+- DragDropContext for board-level drag handling
+- Draggable components for cards
+- Droppable components for lists
+
 ### Data Persistence
 - Client-side only (no backend)
 - localStorage for data persistence
@@ -74,12 +77,10 @@ src/
 - ✅ Demo board data
 
 ### To Be Implemented
-- Board title editing
-- List management (create, edit, delete, reorder)
-- Card management (create, edit, delete, move)
-- Comment management with modal
-- Drag and drop functionality
-- Responsive UI components
+- Additional board features
+- Enhanced card management
+- Advanced drag and drop features
+- Additional responsive UI improvements
 
 ## 🛠️ Getting Started
 
@@ -132,18 +133,17 @@ All styles use SCSS with:
 ## 📦 Dependencies
 
 ### Production
-- `next` - Next.js framework
-- `react` & `react-dom` - React library
-- `zustand` - State management
-- `@dnd-kit/core` - Drag and drop core
-- `@dnd-kit/sortable` - Sortable components
-- `@dnd-kit/utilities` - DnD utilities
+- `next@16.1.1` - Next.js framework
+- `react@19.2.3` & `react-dom@19.2.3` - React library
+- `zustand@^5.0.2` - State management
+- `@hello-pangea/dnd@^18.0.1` - Drag and drop library
 
 ### Development
-- `typescript` - TypeScript compiler
-- `sass` - SCSS compiler
-- `eslint` - Linting
-- `@types/node`, `@types/react`, `@types/react-dom` - Type definitions
+- `typescript@^5` - TypeScript compiler
+- `sass@^1.83.0` - SCSS compiler
+- `eslint@^9` - Linting
+- `eslint-config-next@16.1.1` - Next.js ESLint configuration
+- `@types/node@^20`, `@types/react@^19`, `@types/react-dom@^19` - Type definitions
 
 ## 🔄 Data Flow
 
@@ -163,12 +163,12 @@ All styles use SCSS with:
 
 ## 🚧 Next Steps
 
-1. Create UI components (Board, List, Card)
-2. Implement drag and drop with @dnd-kit
-3. Add modal for card details and comments
-4. Implement inline editing
-5. Add responsive design
-6. Polish UI/UX
+1. Enhanced UI components and features
+2. Additional drag and drop improvements
+3. Advanced card and comment features
+4. Performance optimizations
+5. Additional responsive design improvements
+6. UI/UX polish
 
 ## 📄 License
 

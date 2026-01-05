@@ -11,15 +11,9 @@ importers:
       '@hello-pangea/dnd':
         specifier: ^18.0.1
         version: 18.0.1(@types/react@19.2.7)(react-dom@19.2.3)(react@19.2.3)
-      '@types/normalizr':
-        specifier: ^2.0.18
-        version: 2.0.18
       next:
         specifier: 16.1.1
         version: 16.1.1(@babel/core@7.28.5)(react-dom@19.2.3)(react@19.2.3)(sass@1.97.1)
-      normalizr:
-        specifier: ^3.6.2
-        version: 3.6.2
       react:
         specifier: 19.2.3
         version: 19.2.3
@@ -874,13 +868,6 @@ packages:
     dependencies:
       undici-types: 6.21.0
     dev: true
-
-  /@types/normalizr@2.0.18:
-    resolution: {integrity: sha512-rDbn2HWfD3nJiMg8EGg0mJep9Fv0xIj4oVN5aVvxltTzhR0VkMm6iNGXFnDA+DGm9+9VIokc0f/9Fwhu2N8olg==}
-    deprecated: This is a stub types definition for Normalizr (https://github.com/paularmstrong/normalizr). Normalizr provides its own type definitions, so you don't need @types/normalizr installed!
-    dependencies:
-      normalizr: 3.6.2
-    dev: false
 
   /@types/react-dom@19.2.3(@types/react@19.2.7):
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
@@ -2698,10 +2685,6 @@ packages:
 
   /node-releases@2.0.27:
     resolution: {integrity: sha512-nmh3lCkYZ3grZvqcCH+fjmQ7X+H0OeZgP40OierEaAptX4XofMh5kwNbWh7lBduUzCcV/8kZ+NDLCwm2iorIlA==}
-
-  /normalizr@3.6.2:
-    resolution: {integrity: sha512-30qCybsBaCBciotorvuOZTCGEg2AXrJfADMT2Kk/lvpIAcipHdK0zc33nNtwKzyfQAqIJXAcqET6YgflYUgsoQ==}
-    dev: false
 
   /object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
