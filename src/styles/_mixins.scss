@@ -3,6 +3,8 @@
  * Reusable mixins for common patterns
  */
 
+@use 'variables' as *;
+
 // Flexbox utilities
 @mixin flex-center {
   display: flex;

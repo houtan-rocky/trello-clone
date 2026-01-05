@@ -42,3 +42,5 @@ next-env.d.ts
 
 # history
 .history/
+# Local Netlify folder
+.netlify
